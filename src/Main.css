@@ -1,8 +1,14 @@
+.mainBody {
+  background-color: white;
+}
+
 .main {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   width: 600px;
   display: block;
-  margin: 50px auto;
+  margin: 50px auto 0 auto;
+  background-color: white;
+  padding: 100px;
 }
 
 .main h2 {
