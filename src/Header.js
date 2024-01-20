@@ -14,7 +14,6 @@ export default function Header() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    alert(`Searching for ${keyword}`);
 
     let apiKey = "025000aa1bof6148etc27f34c35bd48a";
     let apiUrl = `https://api.shecodes.io/dictionary/v1/define?word=${keyword}&key=${apiKey}`;
