@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import "./Header.css";
 import axios from "axios";
+import Main from "./Main.js";
+import Footer from "./Footer.js";
 
 export default function Header() {
   let [keyword, setKeyword] = useState("");
+  let [response, setResponse] = useState(null);
 
   function handleResponse(response) {
-    console.log(response.data);
+    setResponse(response.data);
   }
 
   function handleSubmit(event) {
@@ -23,21 +26,29 @@ export default function Header() {
   }
 
   return (
-    <div className="header">
-      <h1>Dictionary</h1>
-      <h2>What do you want to learn more about?</h2>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="search"
-          placeholder="Type a word or a phrase..."
-          className="searchBar"
-          onChange={handleKeyword}
-        />
-        <input type="submit" value="Search" className="searchButton" />
-      </form>
-      <p>
-        <i>e.g. flower, sunset, chair, giraffe...</i>
-      </p>
+    <div>
+      <div className="header">
+        <h1>Dictionary</h1>
+        <h2>What do you want to learn more about?</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="search"
+            placeholder="Type a word or a phrase..."
+            className="searchBar"
+            onChange={handleKeyword}
+          />
+          <input type="submit" value="Search" className="searchButton" />
+        </form>
+        <p>
+          <i>e.g. flower, sunset, chair, giraffe...</i>
+        </p>
+      </div>
+      <div>
+        <Main response={response} />
+      </div>
+      <div>
+        <Footer />
+      </div>
     </div>
   );
 }
