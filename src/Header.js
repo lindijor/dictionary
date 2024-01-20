@@ -32,7 +32,7 @@ export default function Header() {
         <form onSubmit={handleSubmit}>
           <input
             type="search"
-            placeholder="Type a word or a phrase..."
+            placeholder="Type a word..."
             className="searchBar"
             onChange={handleKeyword}
           />
