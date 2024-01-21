@@ -46,7 +46,8 @@
 
 @media (max-width: 900px) {
   .main {
-    width: 400px;
+    max-width: 300px;
+    padding: 30px;
   }
 
   .main h2 {

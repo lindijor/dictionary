@@ -25,8 +25,8 @@ img {
 @media (max-width: 900px) {
   .imageGrid {
     grid-template-columns: 1fr;
-    width: 100%;
-    padding: 0 20px;
+    width: 350px;
+    padding: 40px 0;
   }
 
   img {

@@ -64,4 +64,8 @@ form {
   h2 {
     font-size: 20px;
   }
+
+  .hint {
+    font-size: 10px;
+  }
 }
