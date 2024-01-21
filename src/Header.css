@@ -47,8 +47,11 @@ form {
   cursor: pointer;
 }
 
-p {
+.hint {
   font-size: 12px;
-  margin-top: 3px;
-  margin-right: 190px;
+  font-style: italic;
+  max-width: 365px;
+  margin: 3px auto;
+  text-align: left;
+  display: block;
 }

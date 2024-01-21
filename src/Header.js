@@ -18,6 +18,7 @@ export default function Header() {
     let apiKey = "025000aa1bof6148etc27f34c35bd48a";
     let apiUrl = `https://api.shecodes.io/dictionary/v1/define?word=${keyword}&key=${apiKey}`;
     axios.get(apiUrl).then(handleResponse);
+    console.log(apiUrl);
   }
 
   function handleKeyword(event) {
@@ -37,10 +38,8 @@ export default function Header() {
             onChange={handleKeyword}
           />
           <input type="submit" value="Search" className="searchButton" />
+          <div className="hint">e.g. flower, sunset, chair, giraffe...</div>
         </form>
-        <p>
-          <i>e.g. flower, sunset, chair, giraffe...</i>
-        </p>
       </div>
       <div>
         <Main response={response} />

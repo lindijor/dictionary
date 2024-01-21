@@ -8,7 +8,7 @@ export default function Main(props) {
       <div className="mainBody">
         <div className="main">
           <h2>{props.response.word}</h2>
-          <p>[{props.response.phonetic}]</p>
+          <p className="phonetic">[{props.response.phonetic}]</p>
           {props.response.meanings.map(function (meaning, index) {
             return (
               <div key={index}>

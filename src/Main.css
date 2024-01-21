@@ -25,13 +25,21 @@
   color: #8db79e;
 }
 
-.main p {
+.phonetic {
   font-size: 18px;
   margin: 0;
+}
+
+.definition {
+  font-size: 18px;
+  margin: 0;
+  line-height: 1.5;
 }
 
 .example {
   font-style: italic;
   opacity: 0.6;
   margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
 }
