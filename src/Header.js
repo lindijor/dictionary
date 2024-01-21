@@ -26,8 +26,6 @@ export default function Header() {
     let imageApiUrl = `https://api.shecodes.io/images/v1/search?query=${keyword}&key=${apiKey}`;
     axios.get(apiUrl).then(handleDictionaryResponse);
     axios.get(imageApiUrl).then(handleImageResponse);
-    console.log(apiUrl);
-    console.log(imageApiUrl);
   }
 
   function handleKeyword(event) {
