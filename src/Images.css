@@ -1,0 +1,23 @@
+.imageSection {
+  background-color: white;
+  padding-bottom: 50px;
+}
+
+.imageSection h2 {
+  font-size: 45px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.imageGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  width: 900px;
+  margin: 0 auto;
+}
+
+img {
+  width: 100%;
+  border-radius: 8px;
+}

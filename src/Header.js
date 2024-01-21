@@ -3,13 +3,19 @@ import "./Header.css";
 import axios from "axios";
 import Main from "./Main.js";
 import Footer from "./Footer.js";
+import Images from "./Images.js";
 
 export default function Header() {
   let [keyword, setKeyword] = useState("");
   let [response, setResponse] = useState(null);
+  let [images, setImages] = useState(null);
 
-  function handleResponse(response) {
+  function handleDictionaryResponse(response) {
     setResponse(response.data);
+  }
+
+  function handleImageResponse(response) {
+    setImages(response.data.photos);
   }
 
   function handleSubmit(event) {
@@ -17,8 +23,11 @@ export default function Header() {
 
     let apiKey = "025000aa1bof6148etc27f34c35bd48a";
     let apiUrl = `https://api.shecodes.io/dictionary/v1/define?word=${keyword}&key=${apiKey}`;
-    axios.get(apiUrl).then(handleResponse);
+    let imageApiUrl = `https://api.shecodes.io/images/v1/search?query=${keyword}&key=${apiKey}`;
+    axios.get(apiUrl).then(handleDictionaryResponse);
+    axios.get(imageApiUrl).then(handleImageResponse);
     console.log(apiUrl);
+    console.log(imageApiUrl);
   }
 
   function handleKeyword(event) {
@@ -43,6 +52,9 @@ export default function Header() {
       </div>
       <div>
         <Main response={response} />
+      </div>
+      <div>
+        <Images images={images} />
       </div>
       <div>
         <Footer />
